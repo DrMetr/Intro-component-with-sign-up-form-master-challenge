@@ -1,0 +1,170 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+    font-style: 16px;
+    font-family: "Poppins";
+    line-height: 1.5;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    border: none;
+    height: 3lh;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: var(--red);
+    background-image: url(images/bg-intro-mobile.png);
+    margin: 2rem;
+
+    @media screen and (min-width: 768px) {
+        background-image: url(images/bg-intro-desktop.png);
+        margin: 5rem;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+h1, p {
+    color: white;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 0.5lh;
+}
+
+.buttons_and_form, .form, .adsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: white;
+    border-radius: 10px;
+    width: 90vw;
+    min-width: 300px;
+    margin-bottom: 0.5lh;
+    padding: 1rem;
+    gap: 1rem;
+
+    @media screen and (min-width: 768px) {
+        width: 40vw;
+        padding: 2rem;
+    }
+}
+
+p, .greenButton {
+    font-weight: 400;
+}
+
+.blueButton {
+    background-color: var(--blue);
+    margin-bottom: 0.7rem;
+}
+
+.blueButton:hover {
+    background-color: hsl(248, 28%, 59%);
+}
+
+.greenButton {
+    text-transform: uppercase;
+    background-color: var(--green);
+}
+
+.greenButton:hover {
+    background-color: hsl(154, 74%, 70%);;
+}
+
+.blueButton, .form {
+    box-shadow: 0px 5px hsla(249, 10%, 26%, 0.3);
+}
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding-top: 1lh;
+    padding-bottom: 1lh;
+    border-radius: 5px;
+    border: 1px solid var(--grayishBlue);
+    display: block;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: 2px solid var(--blue);
+    border: none;
+}
+
+input, input:focus, input::placeholder {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: var(--red);
+    padding-left: 1rem;
+}
+
+input::placeholder {
+    color: var(--grayishBlue);
+    height: 4lh;
+}
+
+/*input:placeholder-shown {
+    background-image: url("images/icon-error.svg"); 
+    background-repeat: no-repeat;
+    background-position: 95%;
+}*/
+
+span {
+    color: var(--grayishBlue);
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+span > a {
+    color: var(--red);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.error {
+    color: var(--red);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.7rem;
+}
