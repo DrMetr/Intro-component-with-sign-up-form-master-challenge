@@ -1,18 +1,35 @@
 const email = document.querySelector('#email');
-email.addEventListener('input', onInput);
+const firstName = document.querySelector('#fname');
+const lastName = document.querySelector('#fname');
+const password = document.querySelector('#password');
+const submitButton = document.querySelector('#submitButton');
 
-const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+submitButton.addEventListener('input', onSubmit);
 
-function onInput() {
-    if (isEmailValid(input.value)) {
-      input.style.borderColor = 'green';
-    } else {
-      input.style.borderColor = 'red';
-    }
+const emailRegExp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+function validateEmail(emailInput){
+  return emailRegExp.test(String(emailInput).toLowerCase());
+}
+
+function onSubmitEmail(emailInput){
+  if (validateEmail(emailInput)){
+    return;
+  } else {
+    email.classList.add('.errinput');
+    email.style.outline = 'var(---red)';
+    document.querySelector("#erremail").textContent = 'Looks like this is not an email';
+    document.querySelector("#erremail").style.visibility = 'visible';
   }
-  
-  input.addEventListener('input', onInput);
-  
-  function isEmailValid(value) {
-  return EMAIL_REGEXP.test(value);
+}
+
+function onSubmit(){
+  if () {
+    document.querySelector(".greenButton").textContent = `Form filled successfully!`;
+  } else {
+    
   }
+}
+
+
+  

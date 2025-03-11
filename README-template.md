@@ -95,6 +95,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [::placeholder](https://css-tricks.com/almanac/pseudo-selectors/p/placeholder/) - this helped me with background error image.
+- [Vanilla JavaScript Email Validation](https://dev.to/dailydevtips1/vanilla-javascript-email-validation-21b3) - title is self-explanatory.
+
+-[How to add multiple styles to an element with vanilla JS](https://gomakethings.com/how-to-add-multiple-to-an-element-with-vanilla-js/) - this title is self-explanator too.
 
 ## Author
 
