@@ -16,14 +16,17 @@ function onSubmit() {
   counter = 0;
 
   fields.forEach(field => {
+    let error = field.nextElementSibling;
     if (field.value == '') {
-    field.nextElementSibling.style.visibility = "visible";
-    field.nextElementSibling.textContent = "Please, fill this field";
+    error.style.visibility = "visible";
+    error.textContent = "Please, fill this field";
     field.style.border = '2px solid var(--red)';
+    field.classList.add('errinput');
     counter++;
   } else {
     field.nextElementSibling.style.visibility = "hidden";
     field.style.border = '1px solid var(--grayishBlue)';
+    field.classList.remove('.errinput');
   }});
   
   if (validateEmail(email.value)) {
@@ -32,11 +35,13 @@ function onSubmit() {
     erremail.textContent = '';
     erremail.style.visibility = 'hidden';
     email.style.border = '1px solid var(--grayishBlue)';
+    email.classList.add('.errinput');
   } else {
     erremail.textContent = 'Looks like this is not an email';
     email.style.visibility = 'visible';
     email.style.border = '2px solid var(--red)';
     counter++;
+    email.classList.remove('.errinput');
   }
   
   if (counter == 0) {
