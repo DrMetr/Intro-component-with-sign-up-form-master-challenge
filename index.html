@@ -16,10 +16,7 @@ rel="stylesheet">
 
   
   <title>Frontend Mentor | Intro component with sign up form</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; font-weight: 600;}
-  </style>
+  
 </head>
 <body>
 <main>
@@ -38,13 +35,13 @@ rel="stylesheet">
 
       <form>
         <input type="text" id="fname" name="fname" placeholder="First Name">
-        <div class="error" id="errlname">null</div>
+        <div class="error" id="errlname"></div>
         <input type="text" id="lname" name="lname" placeholder="Last Name ">
-        <div class="error" id="errfname">null</div>
+        <div class="error" id="errfname"></div>
         <input type="text" id="email" name="email" placeholder="Email Address">
-        <div class="error" id="erremail">null</div>
+        <div class="error" id="erremail"></div>
         <input type="text" id="password" name="password" placeholder="Password">
-        <div class="error" id="errpassword">null</div>
+        <div class="error" id="errpassword"></div>
       </form>
 
       <button class="greenButton" id="submitButton">Claim your free trial</button>
@@ -58,11 +55,11 @@ rel="stylesheet">
 </main>
 
   <footer>
-    <p class="attribution">
+    <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/DrMetr">DrMetr</a>.
-    </p>
+    </div>
   </footer>
-  <script src="script.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

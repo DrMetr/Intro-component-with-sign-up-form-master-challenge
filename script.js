@@ -1,35 +1,47 @@
 const email = document.querySelector('#email');
-const firstName = document.querySelector('#fname');
-const lastName = document.querySelector('#fname');
-const password = document.querySelector('#password');
+const erremail = document.querySelector('#erremail');
 const submitButton = document.querySelector('#submitButton');
+const fields = document.querySelectorAll('input');
 
-submitButton.addEventListener('input', onSubmit);
-
+let counter = 0;
 const emailRegExp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+submitButton.addEventListener('click', onSubmit);
 
 function validateEmail(emailInput){
   return emailRegExp.test(String(emailInput).toLowerCase());
 }
 
-function onSubmitEmail(emailInput){
-  if (validateEmail(emailInput)){
-    return;
+function onSubmit() {
+  counter = 0;
+
+  fields.forEach(field => {
+    if (field.value == '') {
+    field.nextElementSibling.style.visibility = "visible";
+    field.nextElementSibling.textContent = "Please, fill this field";
+    field.style.border = '2px solid var(--red)';
+    counter++;
   } else {
-    email.classList.add('.errinput');
-    email.style.outline = 'var(---red)';
-    document.querySelector("#erremail").textContent = 'Looks like this is not an email';
-    document.querySelector("#erremail").style.visibility = 'visible';
-  }
-}
-
-function onSubmit(){
-  if () {
-    document.querySelector(".greenButton").textContent = `Form filled successfully!`;
-  } else {
-    
-  }
-}
-
-
+    field.nextElementSibling.style.visibility = "hidden";
+    field.style.border = '1px solid var(--grayishBlue)';
+  }});
   
+  if (validateEmail(email.value)) {
+    email.classList.remove('errinput');
+    email.style.outline = '';
+    erremail.textContent = '';
+    erremail.style.visibility = 'hidden';
+    email.style.border = '1px solid var(--grayishBlue)';
+  } else {
+    erremail.textContent = 'Looks like this is not an email';
+    email.style.visibility = 'visible';
+    email.style.border = '2px solid var(--red)';
+    counter++;
+  }
+  
+  if (counter == 0) {
+    document.querySelector(".greenButton").textContent = "Submit successful!";
+  } else {
+    document.querySelector(".greenButton").textContent = "Claim your free trial";
+  }
+}
