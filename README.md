@@ -30,11 +30,11 @@ Users should be able to:
 ### Screenshot
 
 ![Inactive state](image.png)
-![Error state](image-1.png)
+![alt text](image-1.png)
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/vanilla-js-intro-component-with-sign-up-form-ogRaniCggM)
 - Live Site URL: [Live page](https://drmetr.github.io/Intro-component-with-sign-up-form-master-challenge/)
 
 ## My process
