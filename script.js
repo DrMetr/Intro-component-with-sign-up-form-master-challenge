@@ -38,10 +38,10 @@ function onSubmit() {
     email.classList.add('.errinput');
   } else {
     erremail.textContent = 'Looks like this is not an email';
-    email.style.visibility = 'visible';
+    erremail.style.visibility = 'visible';
     email.style.border = '2px solid var(--red)';
-    counter++;
     email.classList.add('.errinput');
+    counter++;
   }
   
   if (counter == 0) {
