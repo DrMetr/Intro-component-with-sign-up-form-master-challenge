@@ -41,7 +41,7 @@ function onSubmit() {
     email.style.visibility = 'visible';
     email.style.border = '2px solid var(--red)';
     counter++;
-    email.classList.remove('.errinput');
+    email.classList.add('.errinput');
   }
   
   if (counter == 0) {
